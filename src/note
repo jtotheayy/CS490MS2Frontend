@@ -1,0 +1,33 @@
+ return (
+    <div>
+      <header className="header">
+        <div className="logo">SAKILA</div>
+        <nav className="nav">
+          <button className="button">Home</button>
+          <button className="button">Movies</button>
+          <button className="button">Customers</button>
+          <button className="button">Report</button>
+        </nav>
+      </header>
+
+      <div className='topFilms'>
+        <h2>Top 5 movies rented</h2>
+        <ol>
+          {topMovies.map((movie, index) => (
+            <li key={index} className='item'>{movie.title}</li>
+          ))}
+        </ol>
+      </div>
+
+      <div className='topActors'>
+        <h2>Top 5 actors</h2>
+        <ol>
+          {topActors.map((actor, index) => (
+            <li key={index} className='item'>{actor.name}</li>
+          ))}
+        </ol>
+      </div>
+      {/* Add your other page content here */}
+    </div>
+  );
+};
